@@ -1,3 +1,6 @@
+[![npm version](https://badge.fury.io/js/sails-pagination-middleware.svg)](https://badge.fury.io/js/sails-pagination-middleware)
+[![npm](https://img.shields.io/npm/dt/sails-pagination-middleware.svg)]()
+
 # sails-pagination-middleware
 
 ## About
@@ -15,7 +18,11 @@ Example of the transformed request to `/api/todos?skip=10&limit=10&where={"title
         "totalCount": 80
     }
 
-Package follows the Sails initiative 'convention over configuration', so installing the middleware assumes, you would like to transform requests at all index endpoints.
+Package follows the Sails initiative 'convention over configuration', so installing the middleware assumes, you would like to transform requests at all index endpoints. See section advanced usage for other options.
+
+## Use case example
+
+Check out an use case example over at [vue-sails-todo](https://github.com/xtrinch/vue-sails-todo).
 
 ## Basic Usage
 
@@ -24,14 +31,8 @@ Package follows the Sails initiative 'convention over configuration', so install
 Then in your `config/http.js`
 
     middleware: {
-    // ....
-
-        // require it with whatever name you want
         paginate: require('sails-pagination-middleware'),
-
-        // then add it to the order[] array
         order: [
-          // ...
           'paginate',
           // ...
          ]
