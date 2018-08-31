@@ -1,3 +1,6 @@
+[![npm version](https://badge.fury.io/js/sails-pagination-middleware.svg)](https://badge.fury.io/js/sails-pagination-middleware)
+[![npm](https://img.shields.io/npm/dt/sails-pagination-middleware.svg)]()
+
 # sails-pagination-middleware
 
 ## About
