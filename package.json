@@ -1,0 +1,27 @@
+{
+  "name": "sails-pagination-middleware",
+  "version": "0.0.1",
+  "description": "While paginating, find the total count by criteria, via an added `X-Pagination` header to all blueprints `find` requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xtrinch/sails-pagination-middleware.git"
+  },
+  "author": "mojca.rojko@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xtrinch/sails-pagination-middleware/issues"
+  },
+  "homepage": "https://github.com/xtrinch/sails-pagination-middleware#readme",
+  "keywords": [
+    "sails",
+    "paginate",
+    "pagination",
+    "x-total-count",
+    "count",
+    "total"
+  ]
+}
