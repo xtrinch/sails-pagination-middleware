@@ -1,6 +1,6 @@
 {
   "name": "sails-pagination-middleware",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Return total count in a transformed JSON request when using built-in sails limit & sort parameters",
   "main": "index.js",
   "scripts": {

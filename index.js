@@ -36,7 +36,6 @@ const generate = (options = {}) => {
     let silentError = options.silentError;
 
     let middleware = function (req, res, next) {
-
         let getCount = function() {
             let action = req.options.blueprintAction || req.options.action;
             req[`__${package.name}__`] = true;
@@ -113,10 +112,14 @@ const generate = (options = {}) => {
         var origJson = res.json;
         res.json = function(val) {
             return getCount().then(function(count) {
-                return origJson.call(res, {
-                    totalCount: count,
-                    results: val,
-                }); 
+                if (Array.isArray(val)) {
+                    return origJson.call(res, {
+                        totalCount: count,
+                        results: val,
+                    }); 
+                } else {
+                    return origJson.call(res, val);
+                }
             });
         };
 
