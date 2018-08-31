@@ -4,7 +4,9 @@
 
 Middleware for sails.js for finding the total count by criteria, via a Django rest framework inspired transformed request. 
 
-Example of the transformed request to `/api/todos?where={"title":{"contains":"test"}}`:
+Criteria pagination / filtering is built in to Sails, with keywords `limit`, `skip`, `where`. This package only adds a totalCount field to aid with building page indicators. You could define your page size in your frontend application with the keyword `limit` and just adjust `skip` accordingly. Meaning you could implement all sorts of different pagination indicators with this system.
+
+Example of the transformed request to `/api/todos?skip=10&limit=10&where={"title":{"contains":"test"}}`:
 
     {
         "results": [{
