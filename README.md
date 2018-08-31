@@ -20,6 +20,10 @@ Example of the transformed request to `/api/todos?skip=10&limit=10&where={"title
 
 Package follows the Sails initiative 'convention over configuration', so installing the middleware assumes, you would like to transform requests at all index endpoints. See section advanced usage for other options.
 
+## Use case example
+
+Check out an use case example over at [vue-sails-todo](https://github.com/xtrinch/vue-sails-todo).
+
 ## Basic Usage
 
     npm install --save sails-pagination-middleware
