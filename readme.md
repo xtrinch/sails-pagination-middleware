@@ -20,11 +20,10 @@ It only supports __Sails 1.x+__
 
 ## Basic Usage
 
-```npm install --save sails-pagination-middleware```
+    npm install --save sails-pagination-middleware
 
 Then in your `config/http.js`
 
-    ```javascript
     middleware: {
     // ....
 
@@ -37,29 +36,23 @@ Then in your `config/http.js`
           'paginate',
           // ...
          ]
-    ```
 
 ## Advanced Usage
 
 You can create a policy, say we called it `api/policies/paginate.js`
 
-    ```javascript
-     module.exports = require('sails-pagination-middleware').generate({});
-    ```
+    module.exports = require('sails-pagination-middleware').generate({});
 
 Then in `config/policies.js` you can specify which `find` call will get augmented with the count header.
 
-    ```javascript
     UserController: {
         'find': ['isLoggedIn', 'paginate'],
     }
-    ```
 
 # Extra Options
 
 There are options that you can change, just call the `generate()` function
 
-    ```javascript
         require('sails-pagination-middleware').generate({
             // if you want to add/remove an action i.e. 'user/search' or whatever
             // the array can contain a string for exact match or a regular expression for a pattern
@@ -71,4 +64,3 @@ There are options that you can change, just call the `generate()` function
             // if the .count() calls fails, to throw an error or not
             silentError: false // default
         }),
-    ```
