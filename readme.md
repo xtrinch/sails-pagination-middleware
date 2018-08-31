@@ -4,7 +4,7 @@
 
 Middleware for sails.js for finding the total count by criteria, via a Django rest framework inspired transformed request. 
 
-Example of the transformed request:
+Example of the transformed request to `/api/todos?where={"title":{"contains":"test"}}`:
 
     {
         "results": [{
@@ -14,9 +14,6 @@ Example of the transformed request:
     }
 
 Package follows the Sails initiative 'convention over configuration', so installing the middleware assumes, you would like to transform requests at all index endpoints.
-
-## Sails version support
-It only supports __Sails 1.x+__
 
 ## Basic Usage
 
@@ -37,6 +34,9 @@ Then in your `config/http.js`
           // ...
          ]
 
+## Sails version support
+It only supports __Sails 1.x+__
+
 ## Advanced Usage
 
 You can create a policy, say we called it `api/policies/paginate.js`
@@ -49,7 +49,7 @@ Then in `config/policies.js` you can specify which `find` call will get augmente
         'find': ['isLoggedIn', 'paginate'],
     }
 
-# Extra Options
+## Extra Options
 
 There are options that you can change, just call the `generate()` function
 
