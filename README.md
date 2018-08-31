@@ -28,7 +28,7 @@ Check out an use case example over at [vue-sails-todo](https://github.com/xtrinc
 
     npm install --save sails-pagination-middleware
 
-Then in your `config/http.js`
+Then in your `config/http.js`, add `paginate` to first place in array:
 
     middleware: {
         paginate: require('sails-pagination-middleware'),
