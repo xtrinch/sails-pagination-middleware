@@ -46,7 +46,7 @@ You can create a policy, say we called it `api/policies/paginate.js`
 
     module.exports = require('sails-pagination-middleware').generate({});
 
-Then in `config/policies.js` you can specify which `find` call will get augmented with the count header.
+Then in `config/policies.js` you can specify which `find` call will get augmented with the count field.
 
     UserController: {
         'find': ['isLoggedIn', 'paginate'],
